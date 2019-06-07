@@ -1,0 +1,11 @@
+---
+kind: pipeline
+name: Pipeline
+
+steps:
+  - name: lint
+    image: archlinux/base:latest
+    commands:
+      - pacman -Sy --noconfirm shellcheck yamllint
+      - cicd/lint-shellcheck.sh
+      - cicd/lint-yamllint.sh
