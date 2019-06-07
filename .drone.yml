@@ -7,5 +7,5 @@ steps:
     image: archlinux/base:latest
     commands:
       - pacman -Sy --noconfirm shellcheck yamllint
-      - cicd/lint-shellcheck.sh
-      - cicd/lint-yamllint.sh
+      - lint-shellcheck.sh
+      - lint-yamllint.sh
